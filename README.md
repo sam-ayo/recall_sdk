@@ -1,6 +1,6 @@
 # Recall AI Node.js SDK
 
-A Node.js SDK for integrating with the [Recall AI](https://docs.recall.ai/reference/authentication) API - a video conferencing integration platform that enables automated meeting participation, recording, and transcription.
+A Node.js SDK for integrating with the [Recall AI](https://docs.recall.ai) API - a video conferencing integration platform that enables automated meeting participation, recording, and transcription.
 
 ## Installation
 
