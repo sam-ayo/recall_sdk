@@ -22,6 +22,8 @@ region: 'us-east-2'
 
 This SDK is written in TypeScript and includes type definitions out of the box.
 
+// ... rest of README content ...
+
 ## License
 
                                  Apache License
@@ -41,6 +43,8 @@ This SDK is written in TypeScript and includes type definitions out of the box.
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+// ... rest of README content ...
 
 ## Contributing
 
