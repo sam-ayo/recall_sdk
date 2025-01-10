@@ -24,6 +24,3 @@ export class Recall {
   });
  }
 }
-
-export { Bot };
-export { Auth };
