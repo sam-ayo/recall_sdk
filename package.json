@@ -1,15 +1,23 @@
 {
   "name": "recall_sdk",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.0.3",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "recall",
+    "recall sdk"
+  ],
+  "author": "sam-ayo",
   "license": "ISC",
-  "description": "",
+  "description": "Node js sdk for the recall ai api",
   "dependencies": {
     "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
   }
 }
