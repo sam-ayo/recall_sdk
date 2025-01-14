@@ -5,7 +5,10 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "npx tsc",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "publish:patch": "ts-node scripts/publish.ts patch",
+    "publish:minor": "ts-node scripts/publish.ts minor",
+    "publish:major": "ts-node scripts/publish.ts major"
   },
   "keywords": [
     "recall",
