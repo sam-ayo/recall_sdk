@@ -3,6 +3,10 @@
   "version": "1.2.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sam-ayo/recall_sdk"
+  },
   "scripts": {
     "build": "npx tsc",
     "prepublishOnly": "npm run build",
