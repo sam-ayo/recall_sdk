@@ -55,16 +55,21 @@ export class Bot {
  }
 
  async listChatMessages(params: ListChatMessagesParams) {
-  const url = `${this.botUrl}/${params.id}/chat-messages`;
+  const url = `${this.botUrl}/${params.id}/chat-messages/`;
   const { cursor, ordering } = params;
   return recallRequestTryCatchWrapper(() =>
    this.client.get(url, { params: { cursor, ordering } })
   );
  }
 
+ async retrieve(params: BaseBotParams) {
+  const url = `${this.botUrl}/${params.id}`;
+  return recallRequestTryCatchWrapper(() => this.client.get(url));
+ }
+
  async updateScheduledBot(params: UpdateScheduledParams) {
   const { id, ...bodyParams } = params;
-  const url = `${this.botUrl}/${id}`;
+  const url = `${this.botUrl}/${id}/`;
   return recallRequestTryCatchWrapper(() =>
    this.client.patch(
     url,
@@ -78,28 +83,38 @@ export class Bot {
   );
  }
 
- async retrieve(params: BaseBotParams) {
-  const url = `${this.botUrl}/${params.id}`;
-  return recallRequestTryCatchWrapper(() => this.client.get(url));
- }
-
  async deleteScheduledBot(params: BaseBotParams) {
   const url = `${this.botUrl}/${params.id}/`;
   return recallRequestTryCatchWrapper(() => this.client.delete(url));
  }
 
- async leaveCall(params: BaseBotParams) {
-  const url = `${this.botUrl}/${params.id}/leave_call`;
+ async deleteBotMedia(params: BaseBotParams) {
+  const url = `${this.botUrl}/${params.id}/delete-media/`;
   return recallRequestTryCatchWrapper(() => this.client.post(url));
  }
 
+ async getBotIntellienge(params: BaseBotParams) {
+  const url = `${this.botUrl}/${params.id}/intelligence/`;
+  return recallRequestTryCatchWrapper(() => this.client.get(url));
+ }
+
+ async leaveCall(params: BaseBotParams) {
+  const url = `${this.botUrl}/${params.id}/leave_call/`;
+  return recallRequestTryCatchWrapper(() => this.client.post(url));
+ }
+
+ async getBotLogs(params: BaseBotParams) {
+  const url = `${this.botUrl}/${params.id}/logs/`;
+  return recallRequestTryCatchWrapper(() => this.client.get(url));
+ }
+
  async stopRecording(params: BaseBotParams) {
-  const url = `${this.botUrl}/${params.id}/stop_recording`;
+  const url = `${this.botUrl}/${params.id}/stop_recording/`;
   return recallRequestTryCatchWrapper(() => this.client.post(url));
  }
 
  async getTranscript(params: GetTranscriptParams) {
-  const url = `${this.botUrl}/${params.id}/transcript`;
+  const url = `${this.botUrl}/${params.id}/transcript/`;
   return recallRequestTryCatchWrapper(() =>
    this.client.get(url, {
     params: { enhanced_diarization: params.enhanced_diarization },
