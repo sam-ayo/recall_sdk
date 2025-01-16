@@ -1,6 +1,6 @@
 {
   "name": "recall_sdk",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -30,6 +30,7 @@
     "axios": "^1.7.9"
   },
   "devDependencies": {
+    "@types/node": "^22.10.7",
     "typescript": "^5.7.3"
   }
 }
