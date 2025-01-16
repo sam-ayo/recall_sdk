@@ -5,6 +5,7 @@ import {
  GetTranscriptParams,
  ListChatMessagesParams,
  ListQueryParams,
+ OutputAudioParams,
  UpdateScheduledParams,
 } from "./types";
 import { RecallAxios } from "../recall-axios";
@@ -112,6 +113,17 @@ export class Bot {
   const url = `${this.botUrl}/${params.id}/stop_recording/`;
   return recallRequestTryCatchWrapper(() => this.client.post(url));
  }
+ 
+ async outputAudio (params: OutputAudioParams) {
+    const url = `${this.botUrl}/${params.id}/output_audio/`
+    const {id, ...bodyParams} = params;
+    return recallRequestTryCatchWrapper(()=> this.client.post(url, {...bodyParams},{
+        headers: {
+         "Content-Type": "application/json",
+        },
+       }))
+ }
+ 
 
  async getTranscript(params: GetTranscriptParams) {
   const url = `${this.botUrl}/${params.id}/transcript/`;

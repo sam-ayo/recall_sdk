@@ -105,3 +105,8 @@ export interface MeetingConfigurationParams {
  automatic_video_output?: AutomaticVideoOutput;
  [key: string]: any;
 }
+
+export interface OutputAudioParams extends BaseBotParams{
+    kind: string;
+    b64_data: string;
+}
