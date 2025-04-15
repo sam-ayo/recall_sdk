@@ -27,7 +27,7 @@ export class Recall {
 
     this.calendar = CalendarV2.getInstance({
       apiKey: this.apiKey,
-      calendarUrl: `${this.v2Url}/calendar`,
+      calendarUrl: `${this.v2Url}/calendars/`,
     });
   }
 }
